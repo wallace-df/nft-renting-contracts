@@ -4,7 +4,7 @@ pragma solidity ^0.8.2;
 
 import "./INFTDelegatableCollection.sol";
 
-contract NFTLendingController {
+contract NFTRentingController {
 
   ////////////////////////////////////////////////////////////////////////////////
   // DATA STRUCTURES
@@ -41,7 +41,10 @@ contract NFTLendingController {
     require (_hourlyRate > 0, "Invalid hourly rate");
 
     INFTDelegatableCollection nftCollection = INFTDelegatableCollection(_collectionAddress);
+
     require (nftCollection.ownerOf(_tokenId) == msg.sender, "User does not own this NFT");
+    // TODO: check if INFTDelegatableCollection interface is indeed supported.
+
     nftCollection.transferFrom(msg.sender, address(this), _tokenId);
 
     _lastListingNonce++;

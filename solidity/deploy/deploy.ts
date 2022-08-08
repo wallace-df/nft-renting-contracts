@@ -9,8 +9,8 @@ export default async function (hre: HardhatRuntimeEnvironment) {
   // Create deployer object and load the artifact of the contract we want to deploy.
   const deployer = new Deployer(hre, wallet);
 
-  console.log("Deploying NFTLendingController...");	
-  let artifactNFTLendingController = await deployer.loadArtifact("NFTLendingController");  
-  let nftLendingController = await deployer.deploy(artifactNFTLendingController, []);
-  console.log(`${artifactNFTLendingController.contractName} was deployed to ${nftLendingController.address}`);
+  console.log("Deploying NFTRentingController...");	
+  let artifactNFTRentingController = await deployer.loadArtifact("NFTRentingController");  
+  let nftRentingController = await deployer.deploy(artifactNFTRentingController, []);
+  console.log(`${artifactNFTRentingController.contractName} was deployed to ${nftRentingController.address}`);
 }
