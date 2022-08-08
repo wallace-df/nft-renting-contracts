@@ -1,5 +1,5 @@
 # NFT Renting Contracts
-Cairo and Solidity contracts for NFT Lending dApp.
+Cairo and Solidity contracts for NFT Renting dApp.
 
 ---
 
