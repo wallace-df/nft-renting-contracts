@@ -1,16 +1,16 @@
 # NFT Renting Contracts
-Smart contracts (minter) for the NFT Collection Launcher.
+Cairo and Solidity contracts for NFT Renting dApp.
 
 ---
 
-NFT Launcher is a dApp that provides an interface for:
-
-- Processing, bundling and uploading NFT assets (.json, .png) to IPFS via NFTStorage API (https://nft.storage/).
-- Automatically deploying the NFT minter contracts to the following networks:
-  - StarkNet (testnet) - https://starknet.io/
-  - zkSync (testnet) -  https://zksync.io/
-
----
+NFT P2P Lending is a dApp that allows users to get loans using their NFTs as collateral.
+ - Supports the zkSync (https://zksync.io/) and StarkNet (https://starknet.io/) networks.
+ - Borrowers can specify the loan terms and lock NFTs as collateral.
+ - Lenders can accept loans and redeem locked NFTs in case of default. 
+ - Loan and collateral management is performed by smart contracts.
+ 
+ ---
+ 
 
 ## Cairo
 
@@ -51,7 +51,7 @@ yarn hardhat compile
 
 ### Deploy on the zkSync network
 
-1. Create the *solidity/keys.json* file and set the deployer private wallet:
+1. Set the deployer private wallet in the *solidity/keys.json* file:
 ```json
 {  "zkSyncDeployerWallet": "<YOUR_WALLET_PRIVATE_KEY" }
 ```
